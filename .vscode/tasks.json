@@ -1,0 +1,348 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/ClaudeMcpManager.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish-win-x64",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/ClaudeMcpManager.csproj",
+                "--configuration",
+                "Release",
+                "--runtime",
+                "win-x64",
+                "--self-contained",
+                "true",
+                "--output",
+                "${workspaceFolder}/bin/Release/win-x64",
+                "/property:PublishSingleFile=true",
+                "/property:IncludeNativeLibrariesForSelfExtract=true",
+                "/property:PublishTrimmed=false"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish-win-x86",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/ClaudeMcpManager.csproj",
+                "--configuration",
+                "Release",
+                "--runtime",
+                "win-x86",
+                "--self-contained",
+                "true",
+                "--output",
+                "${workspaceFolder}/bin/Release/win-x86",
+                "/property:PublishSingleFile=true",
+                "/property:IncludeNativeLibrariesForSelfExtract=true",
+                "/property:PublishTrimmed=false"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish-osx-x64",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/ClaudeMcpManager.csproj",
+                "--configuration",
+                "Release",
+                "--runtime",
+                "osx-x64",
+                "--self-contained",
+                "true",
+                "--output",
+                "${workspaceFolder}/bin/Release/osx-x64",
+                "/property:PublishSingleFile=true",
+                "/property:IncludeNativeLibrariesForSelfExtract=true",
+                "/property:PublishTrimmed=false"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish-osx-arm64",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/ClaudeMcpManager.csproj",
+                "--configuration",
+                "Release",
+                "--runtime",
+                "osx-arm64",
+                "--self-contained",
+                "true",
+                "--output",
+                "${workspaceFolder}/bin/Release/osx-arm64",
+                "/property:PublishSingleFile=true",
+                "/property:IncludeNativeLibrariesForSelfExtract=true",
+                "/property:PublishTrimmed=false"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish-linux-x64",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/ClaudeMcpManager.csproj",
+                "--configuration",
+                "Release",
+                "--runtime",
+                "linux-x64",
+                "--self-contained",
+                "true",
+                "--output",
+                "${workspaceFolder}/bin/Release/linux-x64",
+                "/property:PublishSingleFile=true",
+                "/property:IncludeNativeLibrariesForSelfExtract=true",
+                "/property:PublishTrimmed=false"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "clean",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "clean",
+                "${workspaceFolder}/ClaudeMcpManager.csproj"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "restore",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "restore",
+                "${workspaceFolder}/ClaudeMcpManager.csproj"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish-all-platforms",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "clean",
+                "restore",
+                "publish-win-x64",
+                "publish-win-x86",
+                "publish-osx-x64",
+                "publish-osx-arm64",
+                "publish-linux-x64"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": true
+            }
+        },
+        {
+            "label": "pack",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "pack",
+                "${workspaceFolder}/ClaudeMcpManager.csproj",
+                "--configuration",
+                "Release",
+                "--output",
+                "${workspaceFolder}/nupkg",
+                "--include-symbols",
+                "--include-source"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "install-global-tool",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "tool",
+                "install",
+                "--global",
+                "--add-source",
+                "${workspaceFolder}/nupkg",
+                "ClaudeMcpManager"
+            ],
+            "group": "build",
+            "dependsOn": "pack",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "uninstall-global-tool",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "tool",
+                "uninstall",
+                "--global",
+                "ClaudeMcpManager"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "update-global-tool",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "uninstall-global-tool",
+                "pack",
+                "install-global-tool"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": true
+            }
+        },
+        {
+            "label": "list-global-tools",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "tool",
+                "list",
+                "--global"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "test-global-tool",
+            "command": "claude-mcp",
+            "type": "shell",
+            "args": [
+                "--help"
+            ],
+            "group": "test",
+            "dependsOn": "install-global-tool",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": []
+        }
+    ]
+}

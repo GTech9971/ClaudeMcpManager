@@ -64,10 +64,14 @@ public class DirectoryService : IDirectoryService
             {
                 // 新しいディレクトリを追加
                 directoryPaths.Add(fullPath);
-                UpdateDirectoryPaths(filesystemServer, directoryPaths);
             }
+            
+            // 変更を反映
+            UpdateDirectoryPaths(filesystemServer, directoryPaths);
+            config.SetFilesystemServer(filesystemServer);
 
             // 設定を保存
+
             await _configService.SaveConfigAsync(config);
 
             return CommandResult.CreateSuccess($"ディレクトリが正常に追加されました: {fullPath}");

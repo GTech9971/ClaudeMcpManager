@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/ClaudeMcpManager.csproj",
+                "${workspaceFolder}/ClaudeMcpManager.sln",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -223,7 +223,7 @@
             "type": "process",
             "args": [
                 "pack",
-                "${workspaceFolder}/ClaudeMcpManager.csproj",
+                "${workspaceFolder}/ClaudeMcpManager.Main/ClaudeMcpManager.csproj",
                 "--configuration",
                 "Release",
                 "--output",

@@ -6,11 +6,11 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/bin/Debug/net8.0/ClaudeMcpManager.dll",
+            "program": "${workspaceFolder}/ClaudeMcpManager.Main/bin/Debug/net8.0/ClaudeMcpManager.dll",
             "args": [
                 "add"
             ],
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}/ClaudeMcpManager.Main",
             "console": "internalConsole",
             "stopAtEntry": false
         },
@@ -19,13 +19,13 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/bin/Debug/net8.0/ClaudeMcpManager.dll",
+            "program": "${workspaceFolder}/ClaudeMcpManager.Main/bin/Debug/net8.0/ClaudeMcpManager.dll",
             "args": [
                 "add",
                 "--directory",
                 "C:\\TestDirectory"
             ],
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}/ClaudeMcpManager.Main",
             "console": "internalConsole",
             "stopAtEntry": false
         },
@@ -34,12 +34,12 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/bin/Debug/net8.0/ClaudeMcpManager.dll",
+            "program": "${workspaceFolder}/ClaudeMcpManager.Main/bin/Debug/net8.0/ClaudeMcpManager.dll",
             "args": [
                 "add",
                 "--force"
             ],
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}/ClaudeMcpManager.Main",
             "console": "internalConsole",
             "stopAtEntry": false
         },
@@ -48,11 +48,11 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/bin/Debug/net8.0/ClaudeMcpManager.dll",
+            "program": "${workspaceFolder}/ClaudeMcpManager.Main/bin/Debug/net8.0/ClaudeMcpManager.dll",
             "args": [
                 "list"
             ],
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}/ClaudeMcpManager.Main",
             "console": "internalConsole",
             "stopAtEntry": false
         },
@@ -61,12 +61,12 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/bin/Debug/net8.0/ClaudeMcpManager.dll",
+            "program": "${workspaceFolder}/ClaudeMcpManager.Main/bin/Debug/net8.0/ClaudeMcpManager.dll",
             "args": [
                 "list",
                 "--verbose"
             ],
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}/ClaudeMcpManager.Main",
             "console": "internalConsole",
             "stopAtEntry": false
         },
@@ -75,13 +75,13 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/bin/Debug/net8.0/ClaudeMcpManager.dll",
+            "program": "${workspaceFolder}/ClaudeMcpManager.Main/bin/Debug/net8.0/ClaudeMcpManager.dll",
             "args": [
                 "remove",
                 "--directory",
                 "C:\\TestDirectory"
             ],
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}/ClaudeMcpManager.Main",
             "console": "internalConsole",
             "stopAtEntry": false
         },
@@ -90,13 +90,13 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/bin/Debug/net8.0/ClaudeMcpManager.dll",
+            "program": "${workspaceFolder}/ClaudeMcpManager.Main/bin/Debug/net8.0/ClaudeMcpManager.dll",
             "args": [
                 "remove",
                 "--index",
                 "1"
             ],
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}/ClaudeMcpManager.Main",
             "console": "internalConsole",
             "stopAtEntry": false
         },
@@ -105,11 +105,11 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/bin/Debug/net8.0/ClaudeMcpManager.dll",
+            "program": "${workspaceFolder}/ClaudeMcpManager.Main/bin/Debug/net8.0/ClaudeMcpManager.dll",
             "args": [
                 "restart"
             ],
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}/ClaudeMcpManager.Main",
             "console": "internalConsole",
             "stopAtEntry": false
         },
@@ -118,13 +118,13 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/bin/Debug/net8.0/ClaudeMcpManager.dll",
+            "program": "${workspaceFolder}/ClaudeMcpManager.Main/bin/Debug/net8.0/ClaudeMcpManager.dll",
             "args": [
                 "restart",
                 "--wait",
                 "5000"
             ],
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}/ClaudeMcpManager.Main",
             "console": "internalConsole",
             "stopAtEntry": false
         },
@@ -133,11 +133,11 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/bin/Debug/net8.0/ClaudeMcpManager.dll",
+            "program": "${workspaceFolder}/ClaudeMcpManager.Main/bin/Debug/net8.0/ClaudeMcpManager.dll",
             "args": [
                 "--help"
             ],
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}/ClaudeMcpManager.Main",
             "console": "internalConsole",
             "stopAtEntry": false
         },
@@ -146,9 +146,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/bin/Debug/net8.0/ClaudeMcpManager.dll",
+            "program": "${workspaceFolder}/ClaudeMcpManager.Main/bin/Debug/net8.0/ClaudeMcpManager.dll",
             "args": [],
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}/ClaudeMcpManager.Main",
             "console": "internalConsole",
             "stopAtEntry": false
         },

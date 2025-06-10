@@ -12,7 +12,7 @@
     
     <!-- Package Metadata -->
     <PackageId>ClaudeMcpManager</PackageId>
-    <PackageVersion>1.0.2</PackageVersion>
+    <PackageVersion>1.0.5</PackageVersion>
     <Authors>Your Name</Authors>
     <Description>Claude Desktop MCP ディレクトリマネージャー - ファイルシステム許可ディレクトリの管理ツール</Description>
     <PackageTags>claude;mcp;directory;filesystem;management</PackageTags>

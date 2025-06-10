@@ -100,6 +100,7 @@ public class DirectoryService : IDirectoryService
 
             directoryPaths.Remove(fullPath);
             UpdateDirectoryPaths(filesystemServer, directoryPaths);
+            config.SetFilesystemServer(filesystemServer);
 
             await _configService.SaveConfigAsync(config);
 
@@ -123,7 +124,7 @@ public class DirectoryService : IDirectoryService
             }
 
             var filesystemServer = config.GetFilesystemServer()!;
-            var directoryPaths = GetDirectoryPaths(filesystemServer).ToList();
+            var directoryPaths = GetDirectoryPaths(filesystemServer);
 
             var arrayIndex = index - 1; // 1-based to 0-based
             if (arrayIndex < 0 || arrayIndex >= directoryPaths.Count)
@@ -134,6 +135,8 @@ public class DirectoryService : IDirectoryService
             var removedPath = directoryPaths[arrayIndex];
             directoryPaths.RemoveAt(arrayIndex);
             UpdateDirectoryPaths(filesystemServer, directoryPaths);
+
+            config.SetFilesystemServer(filesystemServer);
 
             await _configService.SaveConfigAsync(config);
 
@@ -219,9 +222,9 @@ public class DirectoryService : IDirectoryService
     /// <summary>
     /// ベースargs以降のディレクトリパスを取得
     /// </summary>
-    private static ICollection<string> GetDirectoryPaths(McpServer server)
+    private static List<string> GetDirectoryPaths(McpServer server)
     {
-        ICollection<string> paths = [];
+        var paths = new List<string>();
 
         // ベースargs以降の部分をディレクトリパスとして取得
         for (int i = BaseArgs.Length; i < server.Args.Count; i++)
